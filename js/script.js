@@ -14,7 +14,7 @@ pincel.fillRect(0, 0, 400, 400);
 crearPaleta();
 
 function crearPaleta() {
-    let xMover = 5;
+    let xMover = 20;
     for(let i = 0; i < colores.length; i++) {
         pincel.fillStyle = colores[i];
         pincel.fillRect(xMover,5,tamahoCuadrado,tamahoCuadrado);
