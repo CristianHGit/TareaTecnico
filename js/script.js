@@ -58,7 +58,7 @@ function dibujarCirculo(evento) {
         if (y > tamahoCuadrado + 10) {
             pincel.fillStyle = colores[j];
             pincel.beginPath();
-            pincel.arc(x, y, 5, 0, 2 * Math.PI);
+            pincel.arc(x, y, 10, 0, 2 * Math.PI);
             pincel.fill();
         }
     }
@@ -70,14 +70,14 @@ pantalla.addEventListener('touchmove', dibujarCirculo);
 function habilitarDibujar() {
     puedoDibujar = true;
 
-    // Desactivar desplazamiento táctil mientras dibujas
+
     document.body.style.overflow = 'hidden';
 }
 
 function deshabilitarDibujar() {
     puedoDibujar = false;
 
-    // Reactivar desplazamiento táctil al dejar de dibujar
+
     document.body.style.overflow = 'auto';
 }
 

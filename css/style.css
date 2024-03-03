@@ -6,7 +6,8 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #97057f;
+  background-color: #55174b;
+  overflow: hidden;
 }
 
 header {
@@ -17,7 +18,6 @@ header {
 }
 
 main {
-
   padding: 20px;
 }
 
@@ -27,6 +27,7 @@ canvas {
   display: block;
   margin: 0 auto;
   cursor: url('recursps/Lapiz-a5f99a57.png'), auto;
+  position: relative; /* Asegurar que el canvas esté posicionado correctamente */
 }
 
 #paleta {
@@ -36,8 +37,7 @@ canvas {
 }
 
 footer {
-
-  color: rgb(255, 145, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px;
   position: fixed;
@@ -45,27 +45,33 @@ footer {
   width: 100%;
 }
 
-.burbuja
-{
+.burbujas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.burbuja {
   background: #fff;
   opacity: .3;
   border-radius: 50%;
   position: absolute;
-  bottom: 0;
-  animation: burbujas 10s linear infinite ;
+  animation: burbujas 10s linear infinite;
 }
 
-.burbuja:nth-child(1){
+.burbuja:nth-child(1) {
   width: 80px;
   height: 80px;
   left: 5%;
-  animation-duration:3s ;
+  animation-duration: 3s;
 }
-.burbuja:nth-child(2){
+
+.burbuja:nth-child(2) {
   width: 100px;
   height: 100px;
   left: 55%;
-  animation-duration:4s ;
+  animation-duration: 4s;
 }
 .burbuja:nth-child(3){
   width:125px;
@@ -115,19 +121,17 @@ footer {
   left: 90%;
   animation-duration:5s ;
 }
-@keyframes burbujas{
-  0%{
-      bottom: 0;
+@keyframes burbujas {
+  0% {
+      transform: translateY(10vh); /* Comienza desde la parte inferior de la pantalla */
       opacity: 0;
   }
-  30%{
-    transform: translateX(30px);
+  30% {
+      transform: translateY(60vh); /* Se mueve hacia arriba */
+      opacity: 0.3;
   }
-  50%{
-opacity: .3;
-  }
-  100%{
-    bottom: 100px;
-    opacity: 0;
+  100% {
+      transform: translateY(-10vh); /* Termina más arriba */
+      opacity: 0;
   }
 }
