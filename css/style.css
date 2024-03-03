@@ -6,6 +6,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #97057f;
 }
 
 header {
@@ -16,7 +17,7 @@ header {
 }
 
 main {
-  background-color: rgb(123, 5, 146);
+
   padding: 20px;
 }
 
@@ -25,7 +26,7 @@ canvas {
   height: auto;
   display: block;
   margin: 0 auto;
-  cursor: url(''), auto;
+  cursor: url('recursps/Lapiz-a5f99a57.png'), auto;
 }
 
 #paleta {
@@ -35,11 +36,98 @@ canvas {
 }
 
 footer {
-  background-color: #7c038b;
+
   color: rgb(255, 145, 0);
   text-align: center;
   padding: 20px;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.burbuja
+{
+  background: #fff;
+  opacity: .3;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  animation: burbujas 10s linear infinite ;
+}
+
+.burbuja:nth-child(1){
+  width: 80px;
+  height: 80px;
+  left: 5%;
+  animation-duration:3s ;
+}
+.burbuja:nth-child(2){
+  width: 100px;
+  height: 100px;
+  left: 55%;
+  animation-duration:4s ;
+}
+.burbuja:nth-child(3){
+  width:125px;
+  height: 125px;
+  left: 35%;
+  animation-duration:5s ;
+}
+.burbuja:nth-child(4){
+  width:99px;
+  height: 99px;
+  left: 14%;
+  animation-duration:3s ;
+}
+.burbuja:nth-child(5){
+  width:124px;
+  height: 124px;
+  left: 25%;
+  animation-duration:7s ;
+}
+.burbuja:nth-child(6){
+  width:150px;
+  height: 150px;
+  left: 66%;
+  animation-duration:2s ;
+}
+.burbuja:nth-child(7){
+  width:111px;
+  height: 111px;
+  left: 75%;
+  animation-duration:4s ;
+}
+.burbuja:nth-child(8){
+  width:87px;
+  height: 87px;
+  left: 85%;
+  animation-duration:6s ;
+}
+.burbuja:nth-child(9){
+  width:150px;
+  height: 150px;
+  left: 45%;
+  animation-duration:3s ;
+}
+.burbuja:nth-child(10){
+  width:150px;
+  height: 150px;
+  left: 90%;
+  animation-duration:5s ;
+}
+@keyframes burbujas{
+  0%{
+      bottom: 0;
+      opacity: 0;
+  }
+  30%{
+    transform: translateX(30px);
+  }
+  50%{
+opacity: .3;
+  }
+  100%{
+    bottom: 100px;
+    opacity: 0;
+  }
 }
