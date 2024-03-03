@@ -26,8 +26,8 @@ canvas {
   height: auto;
   display: block;
   margin: 0 auto;
-  cursor: url('recursps/Lapiz-a5f99a57.png'), auto;
-  position: relative; /* Asegurar que el canvas esté posicionado correctamente */
+  cursor: url(recursps/Lapiz-a5f99a57.png);
+  position: relative; 
 }
 
 #paleta {
